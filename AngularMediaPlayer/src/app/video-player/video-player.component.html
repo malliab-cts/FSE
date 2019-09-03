@@ -1,0 +1,6 @@
+<app-player [masterPl]="masterPl" (progressEmitter)='onProgressChange($event)'></app-player>
+<app-controls [masterPl]="masterPl" (replayItemEmitter)='onReplayButtonClick($event)' (playPauseEmitter)='onPlayPauseBtnClick($event)' 
+            (stopEmitter)='onStopBtnClick($event)' (volumeChangeEmitter)='onVolumeChange($event)' (muteEmitter)='onMuteClick($event)' 
+            (likeUnlikeEmitter)='onLikeDislikeClick($event)'></app-controls>
+<app-playlist (playlistChangeEmitter)='onPlayListChange($event)'></app-playlist>
+

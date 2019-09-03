@@ -1,0 +1,15 @@
+<div style="height:1em"></div>
+<div center id='media-controls'>
+  <progress id='progress-bar' min='0' max='100' [value]="progressValue"></progress>
+  <button id='replay-button' class='replay' title='replay' (click)="replayMedia()"></button>	
+  <button id='play-pause-button' class='{{playPauseClass}}' title='play' (click)="togglePlayPause()"></button>
+  <button id='stop-button' class='stop' title='stop' (click)="stopPlayer()"></button>
+  <button id='volume-inc-button' class='volume-plus' title='increase volume' (click)="changeVolume('+')"></button>
+  <button id='volume-dec-button' class='volume-minus' title='decrease volume' (click)="changeVolume('-')"></button>
+  <!--<i id='mute-button' class="{{muteClass}}" (click)="toggleMute(true)" style="color:blue"></i>-->
+  <button id='mute-button' class='{{muteClass}}' title='mute' (click)="toggleMute(true)"></button>	
+
+  <i id="like1" class="glyphicon glyphicon-thumbs-up" style="color:blue" (click)="toogleLikeDislike('like')"></i>  <span id="like1-bs3" [innerHTML]="likeCount"></span>
+  <i id="dislike1" class="glyphicon glyphicon-thumbs-down" style="color:red" (click)="toogleLikeDislike('dislike')"></i>  <span id="dislike1-bs3" [innerHTML]="dislikeCount"></span>
+
+</div> 

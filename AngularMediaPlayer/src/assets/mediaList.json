@@ -1,0 +1,20 @@
+{
+	"mediaList":[
+		{
+			"mediaId":"Item01",
+			"mediaTitle":"Sample_1",
+			"mediaSrc":"././assets/videos/sample_1.mp4",
+			"likeCount":5,
+			"disLikeCount":2,
+			"approved":1
+		},
+		{
+			"mediaId":"Item02",
+			"mediaTitle":"Sample_2",
+			"mediaSrc":"././assets/videos/sample_2.mp4",
+			"likeCount":5,
+			"disLikeCount":2,
+			"approved":0
+		}
+	]
+}

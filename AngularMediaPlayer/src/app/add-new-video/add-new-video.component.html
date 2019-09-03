@@ -1,0 +1,55 @@
+<div style="margin-top: 20px">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="row form-group">
+        <label class="col-lg-1">Title</label>
+        <div class="col-lg-5">
+          <input [(ngModel)]="videoTitle" class="form-control" style="height:25px;"/></div>
+        <div class="col-lg-6"></div>
+      </div>
+      <div class="row form-group">
+        <label class="col-lg-1">Source</label>
+        <div class="col-lg-5">
+          <input [(ngModel)]="videoSource" class="form-control" style="height:25px;"/></div>
+        <div class="col-lg-6"></div>
+      </div>
+      <div class="row">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-5">
+          <button type="button" class="btn btn-primary" 
+            style="text-indent: 0;height: 20px;width: 100px;padding: 0;"
+            (click)="addVideo()">
+            {{ addBtn == true ? 'Add Video' : 'Save' }}
+          </button>
+        </div>
+        <div class="col-lg-6"></div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="row" *ngIf="mediaPlayList.length>0">
+        <div class="col-lg-12">
+            <table style="width:100%;">
+              <thead>
+                <th>S.No</th>
+                <th>Title</th>
+                <th>Url</th>
+              </thead>
+              <tbody>
+                <tr *ngFor="let mediaItem of mediaPlayList">
+                    <td>{{mediaItem?.mediaId}}</td>
+                    <td>{{mediaItem?.mediaTitle}}</td>
+                    <td>{{mediaItem?.mediaSrc}}</td>
+                    <td>
+                      <button type="button" (click)="editVideo(mediaItem)" class="btn btn-primary" style="text-indent: 0;height: 20px;width: 45px;padding: 0;">Edit</button></td>
+                    <td>
+                      <button type="button" (click)="deleteVideo(mediaItem.mediaId)" class="btn btn-danger" style="text-indent: 0;height: 20px;width: 55px;padding: 0;">Delete</button></td>
+                    <td>
+                      <button type="button" [disabled]="mediaItem.approved==1" (click)="approveVideo(mediaItem.mediaId)" class="btn btn-success" style="text-indent: 0;height: 20px;width: 65px;padding: 0;">Approve</button></td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

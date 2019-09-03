@@ -1,0 +1,3 @@
+<div *ngFor="let media of playList">
+  <span class='play-item' *ngIf="media.approved==1" (click)="playListChanged(media)">{{media.mediaTitle}}</span>
+</div>
