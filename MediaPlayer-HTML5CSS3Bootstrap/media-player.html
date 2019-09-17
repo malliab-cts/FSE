@@ -1,0 +1,46 @@
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<title>Media Player using HTML5</title>
+		<link href='media-player.css' rel='stylesheet' />
+		<script src='media-player.js'></script>
+</head>
+<body>
+	<h1 style="color:#0684a0;">  Media Player using HTML5</h1>
+	<div id='media-player' >
+		<video id='media-video' controls>
+			<source src='sample_1.mp4' type='video/mp4'>
+			<source src='mov_bbb.webm' type='video/webm'>
+		</video>
+					<div style="height:1em"></div>
+		<div center id='media-controls'>
+			<progress id='progress-bar' min='0' max='100' value='0'>0% played</progress>
+			<button id='replay-button' class='replay' title='replay' onclick='replayMedia();'>Replay</button>	
+			<button id='play-pause-button' class='play' title='play' onclick='togglePlayPause();'>Play</button>
+			<button id='stop-button' class='stop' title='stop' onclick='stopPlayer();'>Stop</button>
+			<button id='volume-inc-button' class='volume-plus' title='increase volume' onclick='changeVolume("+");'>Increase volume</button>
+			<button id='volume-dec-button' class='volume-minus' title='decrease volume' onclick='changeVolume("-");'>Decrease volume</button>
+			<i id='mute-button' class="glyphicon glyphicon-headphones" onclick='toggleMute("true");' style="color:blue"></i>
+
+			<i id="like1" class="glyphicon glyphicon-thumbs-up" style="color:blue"></i>  <span id="like1-bs3"></span>
+            <i id="dislike1" class="glyphicon glyphicon-thumbs-down" style="color:red"></i>  <span id="dislike1-bs3"></span>
+                   
+
+		</div>
+		<div id='media-play-list'>
+			<h3 style="color:#0684a0;">Play list</h3>
+			<ul id='play-list' style="color:#0684a0;">
+				<li><span class='play-item' onclick='loadVideo("mov_bbb.mp4", "mov_bbb.mp4");'>Morning Bunny </span></li>
+				<li><span class='play-item' onclick='loadVideo("sample_2.mp4", "sample_2.mp4");'>Earth</span></li>
+			</ul>
+		</div>
+	</div>	
+</body>
+</html>
